@@ -3,14 +3,14 @@
   "installCommand": "pnpm install --no-frozen-lockfile",
   "buildCommand": "pnpm run build",
   "functions": {
-    "dist/index.mjs": {
-      "runtime": "nodejs24.x"
+    "api/server.js": {
+      "includeFiles": "dist/**"
     }
   },
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/dist/index.mjs"
+      "destination": "/api/server.js"
     }
   ]
 }
