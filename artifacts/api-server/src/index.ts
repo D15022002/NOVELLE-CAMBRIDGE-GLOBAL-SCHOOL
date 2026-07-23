@@ -1,5 +1,10 @@
-import app from "./app";
-import { logger } from "./lib/logger";
+import app from "./app.js";
+import { logger } from "./lib/logger.js";
+
+declare const process: {
+  env: Record<string, string | undefined>;
+  exit(code?: number): never;
+};
 
 if (process.env.NODE_ENV !== "production") {
   const rawPort = process.env["PORT"];
@@ -16,13 +21,13 @@ if (process.env.NODE_ENV !== "production") {
     throw new Error(`Invalid PORT value: "${rawPort}"`);
   }
 
-  app.listen(port, (err) => {
-    if (err) {  
-      logger.error({ err }, "Error listening on port");
-      process.exit(1);
-    }
-
+  const server = app.listen(port, () => {
     logger.info({ port }, "Server listening");
+  });
+
+  server.on("error", (err: unknown) => {
+    logger.error({ err }, "Error listening on port");
+    process.exit(1);
   });
 }
 

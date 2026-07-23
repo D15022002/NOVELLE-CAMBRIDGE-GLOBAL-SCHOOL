@@ -1,3 +1,4 @@
+import process from "node:process";
 import pino from "pino";
 
 const isProduction = process.env.NODE_ENV === "production";
