@@ -1,6 +1,6 @@
 # Cambridge Global School
 
-Monorepo for the Cambridge Global School marketing site and its supporting Express API.
+This Monorepo for the Cambridge Global School marketing site and its supporting Express API.
 
 ## Workspace overview
 
