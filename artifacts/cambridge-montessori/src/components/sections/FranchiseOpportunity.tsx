@@ -233,8 +233,8 @@ export function FranchiseOpportunity() {
               +91 7989261653
             </a>
             {' '}or{' '}
-            <a href="mailto:ncgs.inspira13@gmail.com" className="text-accent hover:text-accent/80 transition-colors font-medium">
-              ncgs.inspira13@gmail.com
+            <a href="mailto:inspira13@gmail.com" className="text-accent hover:text-accent/80 transition-colors font-medium">
+              inspira13@gmail.com
             </a>
           </p>
         </motion.div>

@@ -35,7 +35,7 @@ export function Footer() {
               <a href="#" className="p-2.5 bg-white/5 rounded-full hover:bg-accent/20 hover:text-accent transition-colors">
                 <Youtube className="w-4 h-4" />
               </a>
-              <a href="https://wa.me/917989261653" target="_blank" rel="noreferrer" className="p-2.5 bg-white/5 rounded-full hover:bg-accent/20 hover:text-accent transition-colors">
+              <a href="https://wa.me/918555015234" target="_blank" rel="noreferrer" className="p-2.5 bg-white/5 rounded-full hover:bg-accent/20 hover:text-accent transition-colors">
                 <MessageCircle className="w-4 h-4" />
               </a>
             </div>
@@ -66,11 +66,11 @@ export function Footer() {
               </li>
               <li className="flex gap-3 items-center">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
-                <a href="tel:+917989261653" className="hover:text-accent transition-colors">+91 7989261653</a>
+                <a href="tel:+918555015234" className="hover:text-accent transition-colors">+91 8555015234</a>
               </li>
               <li className="flex gap-3 items-center">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
-                <a href="mailto:inspira13@gmail.com" className="hover:text-accent transition-colors">inspira13@gmail.com</a>
+                <a href="mailto:kg.cmps.vizag@gmail.com" className="hover:text-accent transition-colors">kg.cmps.vizag@gmail.com</a>
               </li>
               <li className="flex gap-3 items-center">
                 <Globe className="w-5 h-5 text-accent shrink-0" />

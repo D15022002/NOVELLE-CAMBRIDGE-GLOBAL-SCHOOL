@@ -100,13 +100,22 @@ export function FinalCTA() {
 
           </div>
 
-          {/* Contact quick-line */}
-          <p className="mt-12 text-white/50 text-sm">
-            Questions? Call us at{' '}
-            <a href="tel:+917989261653" className="text-accent hover:text-accent/80 transition-colors font-medium">
-              +91 7989261653
-            </a>
-          </p>
+          {/* Contact quick-lines */}
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6 text-sm text-white/50">
+            <span>
+              Admissions:{' '}
+              <a href="tel:+918555015234" className="text-accent hover:text-accent/80 transition-colors font-medium">
+                +91 8555015234
+              </a>
+            </span>
+            <span className="hidden sm:inline text-white/20">|</span>
+            <span>
+              Franchise:{' '}
+              <a href="tel:+917989261653" className="text-accent hover:text-accent/80 transition-colors font-medium">
+                +91 7989261653
+              </a>
+            </span>
+          </div>
         </motion.div>
       </div>
     </section>

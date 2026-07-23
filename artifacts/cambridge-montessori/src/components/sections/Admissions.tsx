@@ -76,23 +76,23 @@ export function Admissions() {
               </div>
 
               <div className="space-y-5">
-                <a href="tel:+917989261653" className="flex items-center gap-4 group">
+                <a href="tel:+918555015234" className="flex items-center gap-4 group">
                   <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-accent/30 transition-colors">
                     <Phone className="w-5 h-5 text-accent" />
                   </div>
                   <div>
                     <p className="text-xs text-white/50 font-medium uppercase tracking-wide">Phone</p>
-                    <p className="text-white font-medium">+91 7989261653</p>
+                    <p className="text-white font-medium">+91 8555015234</p>
                   </div>
                 </a>
 
-                <a href="mailto:inspira13@gmail.com" className="flex items-center gap-4 group">
+                <a href="mailto:kg.cmps.vizag@gmail.com" className="flex items-center gap-4 group">
                   <div className="w-10 h-10 bg-accent/20 rounded-lg flex items-center justify-center shrink-0 group-hover:bg-accent/30 transition-colors">
                     <Mail className="w-5 h-5 text-accent" />
                   </div>
                   <div>
                     <p className="text-xs text-white/50 font-medium uppercase tracking-wide">Email</p>
-                    <p className="text-white font-medium">inspira13@gmail.com</p>
+                    <p className="text-white font-medium">kg.cmps.vizag@gmail.com</p>
                   </div>
                 </a>
 
