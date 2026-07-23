@@ -11,7 +11,6 @@ import { CoreValues } from '@/components/sections/CoreValues';
 import { BeyondClassroom } from '@/components/sections/BeyondClassroom';
 import { Safety } from '@/components/sections/Safety';
 import { Testimonials } from '@/components/sections/Testimonials';
-import { Gallery } from '@/components/sections/Gallery';
 import { Admissions } from '@/components/sections/Admissions';
 import { FAQ } from '@/components/sections/FAQ';
 import { Teachers } from '@/components/sections/Teachers';
@@ -33,7 +32,6 @@ function Home() {
         <BeyondClassroom />
         <Safety />
         <Testimonials />
-        <Gallery />
         <Admissions />
         <FAQ />
         <Teachers />

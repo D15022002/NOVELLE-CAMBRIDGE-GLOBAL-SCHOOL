@@ -9,7 +9,6 @@ const navLinks = [
   { name: 'Programs', href: '#programs' },
   { name: 'Franchise', href: '#franchise' },
   { name: 'Admissions', href: '#admissions' },
-  { name: 'Gallery', href: '#gallery' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -74,8 +73,8 @@ export function Navbar() {
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6">
-            <ul className="flex items-center gap-5">
+          <nav className="hidden lg:flex items-center gap-4">
+            <ul className="flex items-center gap-4">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <a
@@ -93,10 +92,26 @@ export function Navbar() {
             <a
               href="#admissions"
               onClick={(e) => { e.preventDefault(); scrollToSection('#admissions'); }}
-              className="flex items-center gap-2 px-5 py-2.5 bg-accent text-foreground text-sm font-semibold rounded-full shadow-sm hover:bg-accent/90 hover:-translate-y-0.5 transition-all"
+              className="flex items-center gap-2 px-4 py-2 bg-accent text-foreground text-sm font-semibold rounded-full shadow-sm hover:bg-accent/90 hover:-translate-y-0.5 transition-all whitespace-nowrap"
             >
               Admissions Open
             </a>
+          </nav>
+
+          {/* Tablet Nav (md only — compact, no button) */}
+          <nav className="hidden md:flex lg:hidden items-center gap-3">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
+                className={`text-xs font-medium hover:text-accent transition-colors ${
+                  isScrolled ? 'text-foreground/80' : 'text-white/90 drop-shadow-sm'
+                }`}
+              >
+                {link.name}
+              </a>
+            ))}
           </nav>
 
           {/* Mobile Toggle */}

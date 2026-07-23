@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { BookOpen, Globe, Crown, GraduationCap, ShieldCheck, Leaf, TrendingUp } from 'lucide-react';
+import { BookOpen, Globe, Crown, GraduationCap, ShieldCheck, Leaf, TrendingUp, FlaskConical } from 'lucide-react';
 
 const reasons = [
   {
@@ -31,6 +31,11 @@ const reasons = [
     title: "Montessori Methodology",
     description: "Hands-on, self-directed learning materials that spark curiosity and build independent thinkers.",
     icon: Leaf,
+  },
+  {
+    title: "STEM Methodology",
+    description: "Integrated Science, Technology, Engineering & Math learning that builds analytical thinking and real-world problem-solving skills.",
+    icon: FlaskConical,
   },
   {
     title: "100% Marketing Support",
