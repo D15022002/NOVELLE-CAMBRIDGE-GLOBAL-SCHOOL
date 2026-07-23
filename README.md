@@ -83,4 +83,7 @@ pnpm run build
 
 ## Deployment note
 
-The API server includes a `vercel.json` file in `artifacts/api-server` that routes all requests to the Express app entrypoint.
+- Deploy from repository root only.
+- Use the single root Vercel config in `vercel.json`.
+- Frontend output is served from `artifacts/cambridge-montessori/dist/public`.
+- Backend runs as Vercel Functions from `api/index.js` and `api/[...path].js`, loading the API bundle at `artifacts/api-server/dist/index.mjs`.
