@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import heroImage from '@assets/generated_images/hero.jpg';
 import schoolLogo from '@assets/WhatsApp_Image_2026-07-23_at_17.04.22_1784812035566.jpeg';
-import { Play, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 export function Hero() {
   const scrollToSection = (href: string) => {
@@ -130,13 +130,13 @@ export function Hero() {
             >
               Apply for Admission
             </a>
-            <button
-              onClick={() => scrollToSection('#video')}
-              className="w-full sm:w-auto flex items-center justify-center gap-2 px-8 py-4 bg-white/10 text-white border border-white/30 rounded-full font-medium hover:bg-white/20 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm"
+            <a
+              href="#franchise"
+              onClick={(e) => { e.preventDefault(); scrollToSection('#franchise'); }}
+              className="w-full sm:w-auto px-8 py-4 bg-white/10 text-white border border-white/30 rounded-full font-medium hover:bg-white/20 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm text-center"
             >
-              <Play className="w-4 h-4 fill-white" />
-              Watch Our Story
-            </button>
+              Franchise Opportunity
+            </a>
           </motion.div>
         </div>
       </div>

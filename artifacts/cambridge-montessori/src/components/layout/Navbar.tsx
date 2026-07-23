@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Play } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import schoolLogo from '@assets/WhatsApp_Image_2026-07-23_at_17.04.22_1784812035566.jpeg';
 
@@ -7,6 +7,7 @@ const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Programs', href: '#programs' },
+  { name: 'Franchise', href: '#franchise' },
   { name: 'Admissions', href: '#admissions' },
   { name: 'Gallery', href: '#gallery' },
   { name: 'Contact', href: '#contact' },
@@ -90,12 +91,11 @@ export function Navbar() {
               ))}
             </ul>
             <a
-              href="#video"
-              onClick={(e) => { e.preventDefault(); scrollToSection('#video'); }}
+              href="#admissions"
+              onClick={(e) => { e.preventDefault(); scrollToSection('#admissions'); }}
               className="flex items-center gap-2 px-5 py-2.5 bg-accent text-foreground text-sm font-semibold rounded-full shadow-sm hover:bg-accent/90 hover:-translate-y-0.5 transition-all"
             >
-              <Play className="w-3.5 h-3.5 fill-current" />
-              Watch Video
+              Admissions Open
             </a>
           </nav>
 
@@ -134,12 +134,11 @@ export function Navbar() {
               ))}
             </ul>
             <a
-              href="#video"
-              onClick={(e) => { e.preventDefault(); scrollToSection('#video'); }}
+              href="#admissions"
+              onClick={(e) => { e.preventDefault(); scrollToSection('#admissions'); setIsMobileMenuOpen(false); }}
               className="flex items-center justify-center gap-2 w-full text-center py-3 bg-accent text-foreground text-base font-semibold rounded-xl shadow-sm mt-1"
             >
-              <Play className="w-4 h-4 fill-current" />
-              Watch Video
+              Admissions Open
             </a>
           </motion.div>
         )}

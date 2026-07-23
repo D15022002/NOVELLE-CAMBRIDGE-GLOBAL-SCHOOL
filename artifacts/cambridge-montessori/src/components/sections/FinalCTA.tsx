@@ -40,32 +40,68 @@ export function FinalCTA() {
           <span className="text-accent uppercase tracking-widest text-sm font-semibold mb-6 block">Take the Next Step</span>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-8 leading-tight">
-            Ready to Begin Your Child's <br className="hidden md:block"/> Learning Journey?
+            Ready to Be a Part of <br className="hidden md:block"/> the Novelle Cambridge Family?
           </h2>
 
-          <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-12">
-            Give your child the gift of a Cambridge education — where global excellence meets a nurturing, joyful and inspiring environment.
+          <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed max-w-2xl mx-auto mb-4">
+            Whether you're looking to enrol your child in a Cambridge education or partner with us to build a school in your city — we'd love to hear from you.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#admissions"
-              onClick={(e) => { e.preventDefault(); scrollToSection('#admissions'); }}
-              className="w-full sm:w-auto px-10 py-4 bg-accent text-foreground rounded-full font-semibold shadow-[0_4px_20px_rgba(201,160,40,0.4)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(201,160,40,0.6)] transition-all duration-300"
+          {/* Two CTA groups */}
+          <div className="mt-10 flex flex-col md:flex-row gap-8 justify-center items-stretch">
+
+            {/* School Enquiry */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="flex flex-col items-center gap-3"
             >
-              Apply for Admission
-            </a>
-            <a
-              href="#video"
-              onClick={(e) => { e.preventDefault(); scrollToSection('#video'); }}
-              className="w-full sm:w-auto px-10 py-4 bg-white/10 text-white border border-white/20 rounded-full font-medium hover:bg-white/20 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm"
+              <p className="text-white/50 text-xs uppercase tracking-widest font-medium">For School Admissions</p>
+              <a
+                href="#admissions"
+                onClick={(e) => { e.preventDefault(); scrollToSection('#admissions'); }}
+                className="px-10 py-4 bg-accent text-foreground rounded-full font-semibold shadow-[0_4px_20px_rgba(201,160,40,0.4)] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(201,160,40,0.6)] transition-all duration-300 w-full text-center"
+              >
+                Apply for Admission
+              </a>
+            </motion.div>
+
+            {/* Divider */}
+            <div className="hidden md:flex flex-col items-center justify-center">
+              <div className="w-px h-16 bg-white/20"></div>
+              <span className="text-white/30 text-xs py-2 font-medium">or</span>
+              <div className="w-px h-16 bg-white/20"></div>
+            </div>
+            <div className="md:hidden flex items-center gap-4">
+              <div className="flex-1 h-px bg-white/20"></div>
+              <span className="text-white/30 text-xs font-medium">or</span>
+              <div className="flex-1 h-px bg-white/20"></div>
+            </div>
+
+            {/* Franchise Enquiry */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex flex-col items-center gap-3"
             >
-              Watch Our Story
-            </a>
+              <p className="text-white/50 text-xs uppercase tracking-widest font-medium">For Franchise Partnership</p>
+              <a
+                href="#contact"
+                onClick={(e) => { e.preventDefault(); scrollToSection('#contact'); }}
+                className="px-10 py-4 bg-white/10 text-white border border-white/20 rounded-full font-medium hover:bg-white/20 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm w-full text-center"
+              >
+                Enquire About Franchise
+              </a>
+            </motion.div>
+
           </div>
 
           {/* Contact quick-line */}
-          <p className="mt-10 text-white/50 text-sm">
+          <p className="mt-12 text-white/50 text-sm">
             Questions? Call us at{' '}
             <a href="tel:+917989261653" className="text-accent hover:text-accent/80 transition-colors font-medium">
               +91 7989261653

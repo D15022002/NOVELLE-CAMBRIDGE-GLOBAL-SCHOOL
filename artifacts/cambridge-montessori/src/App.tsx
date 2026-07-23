@@ -7,8 +7,6 @@ import { CambridgeCurriculum } from '@/components/sections/CambridgeCurriculum';
 import { Philosophy } from '@/components/sections/Philosophy';
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs';
 import { Programs } from '@/components/sections/Programs';
-import { SchoolVideo } from '@/components/sections/SchoolVideo';
-import { DayAtSchool } from '@/components/sections/DayAtSchool';
 import { CoreValues } from '@/components/sections/CoreValues';
 import { BeyondClassroom } from '@/components/sections/BeyondClassroom';
 import { Safety } from '@/components/sections/Safety';
@@ -17,6 +15,7 @@ import { Gallery } from '@/components/sections/Gallery';
 import { Admissions } from '@/components/sections/Admissions';
 import { FAQ } from '@/components/sections/FAQ';
 import { Teachers } from '@/components/sections/Teachers';
+import { FranchiseOpportunity } from '@/components/sections/FranchiseOpportunity';
 import { FinalCTA } from '@/components/sections/FinalCTA';
 
 function Home() {
@@ -30,8 +29,6 @@ function Home() {
         <Philosophy />
         <WhyChooseUs />
         <Programs />
-        <SchoolVideo />
-        <DayAtSchool />
         <CoreValues />
         <BeyondClassroom />
         <Safety />
@@ -40,6 +37,7 @@ function Home() {
         <Admissions />
         <FAQ />
         <Teachers />
+        <FranchiseOpportunity />
         <FinalCTA />
       </main>
       <Footer />
