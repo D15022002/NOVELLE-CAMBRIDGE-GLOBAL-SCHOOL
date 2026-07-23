@@ -52,74 +52,52 @@
 }
 
 :root {
-  --background: 38 72% 96%; /* #FDF8F0 Cream */
-  --foreground: 218 23% 23%; /* #2D3748 Charcoal */
-  --border: 40 31% 82%; /* #E2D8C3 */
-  
-  --card: 43 45% 92%; /* #F5EFE0 Beige */
-  --card-foreground: 218 23% 23%;
-  --card-border: 40 31% 82%;
+  /* Navy Blue + Gold palette to match school crest */
+  --background: 220 30% 98%;     /* Near-white with cool tint */
+  --foreground: 220 45% 14%;     /* Deep navy text */
+  --border: 220 20% 88%;
 
-  --popover: 38 72% 96%;
-  --popover-foreground: 218 23% 23%;
-  --popover-border: 40 31% 82%;
+  --card: 220 25% 96%;           /* Very light blue-gray card */
+  --card-foreground: 220 45% 14%;
+  --card-border: 220 20% 88%;
 
-  --primary: 130 18% 49%; /* #6B8F71 Sage Green */
+  --popover: 220 30% 98%;
+  --popover-foreground: 220 45% 14%;
+  --popover-border: 220 20% 88%;
+
+  --primary: 220 50% 22%;        /* Deep navy #1A2D50 */
   --primary-foreground: 0 0% 100%;
+  --primary-border: hsl(220 50% 18%);
 
-  --secondary: 196 61% 69%; /* #7EC8E3 Sky Blue */
-  --secondary-foreground: 218 23% 23%;
+  --secondary: 220 40% 40%;      /* Medium navy */
+  --secondary-foreground: 0 0% 100%;
+  --secondary-border: hsl(220 40% 35%);
 
-  --accent: 19 46% 56%; /* #C47C5A Terracotta */
-  --accent-foreground: 0 0% 100%;
+  --accent: 43 70% 47%;          /* Gold #C9A028 */
+  --accent-foreground: 220 45% 10%;
+  --accent-border: hsl(43 70% 40%);
 
-  --muted: 43 35% 86%; /* #E9E1CD */
-  --muted-foreground: 218 15% 45%;
+  --muted: 220 15% 92%;
+  --muted-foreground: 220 20% 48%;
+  --muted-border: hsl(220 15% 85%);
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
+  --destructive-border: hsl(0 84% 55%);
 
-  --input: 40 31% 82%;
-  --ring: 130 18% 49%;
+  --input: 220 20% 88%;
+  --ring: 220 50% 22%;
 
   --app-font-sans: 'Outfit', sans-serif;
   --app-font-serif: 'Fraunces', serif;
   --app-font-mono: monospace;
-  
+
   --radius: 1rem;
-}
 
-.dark {
-  /* Using light mode variables for dark mode as this is a warm preschool site, dark mode shouldn't be too harsh */
-  --background: 218 23% 15%; 
-  --foreground: 38 72% 96%;
-  --border: 218 20% 25%;
-  
-  --card: 218 23% 20%; 
-  --card-foreground: 38 72% 96%;
-  --card-border: 218 20% 25%;
-
-  --popover: 218 23% 15%;
-  --popover-foreground: 38 72% 96%;
-  --popover-border: 218 20% 25%;
-
-  --primary: 130 18% 49%; 
-  --primary-foreground: 0 0% 100%;
-
-  --secondary: 196 61% 69%; 
-  --secondary-foreground: 218 23% 15%;
-
-  --accent: 19 46% 56%; 
-  --accent-foreground: 0 0% 100%;
-
-  --muted: 218 23% 25%;
-  --muted-foreground: 218 15% 75%;
-
-  --destructive: 0 84% 60%;
-  --destructive-foreground: 0 0% 100%;
-
-  --input: 218 20% 25%;
-  --ring: 130 18% 49%;
+  /* Elevation overlay system */
+  --elevate-1: rgba(0,0,0,0.03);
+  --elevate-2: rgba(0,0,0,0.08);
+  --opaque-button-border-intensity: -8;
 }
 
 @layer base {
@@ -130,7 +108,7 @@
   body {
     @apply font-sans antialiased bg-background text-foreground selection:bg-primary/20 selection:text-primary;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
   }

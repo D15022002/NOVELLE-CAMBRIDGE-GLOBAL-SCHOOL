@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
-import { Leaf, Menu, X } from 'lucide-react';
+import { Menu, X, Play } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import schoolLogo from '@assets/WhatsApp_Image_2026-07-23_at_17.04.22_1784812035566.jpeg';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
-  { name: 'Method', href: '#method' },
   { name: 'Programs', href: '#programs' },
   { name: 'Admissions', href: '#admissions' },
   { name: 'Gallery', href: '#gallery' },
+  { name: 'Contact', href: '#contact' },
 ];
 
 export function Navbar() {
@@ -32,49 +33,55 @@ export function Navbar() {
       const elementRect = element.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
       const offsetPosition = elementPosition - offset;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
     }
   };
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-background/90 backdrop-blur-md shadow-sm py-3' 
-          : 'bg-transparent py-5'
+        isScrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-border/50 py-2'
+          : 'bg-transparent py-4'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <a 
-            href="#home" 
+          {/* Logo */}
+          <a
+            href="#home"
             onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }}
-            className="flex items-center gap-2 z-50 relative group"
+            className="flex items-center gap-3 z-50 relative group"
           >
-            <div className={`p-2 rounded-xl transition-colors ${isScrolled ? 'bg-primary/10 text-primary' : 'bg-white/20 text-primary-foreground md:text-primary md:bg-primary/10'} backdrop-blur-sm group-hover:bg-primary group-hover:text-white`}>
-              <Leaf className="w-5 h-5 md:w-6 md:h-6" />
+            <img
+              src={schoolLogo}
+              alt="Novelle Cambridge Global School"
+              className="w-10 h-10 md:w-12 md:h-12 object-contain rounded-full shadow-sm"
+            />
+            <div className="flex flex-col leading-tight">
+              <span className={`font-serif text-base md:text-lg font-semibold tracking-tight transition-colors ${
+                isScrolled ? 'text-primary' : 'text-white drop-shadow-md'
+              }`}>
+                Novelle Cambridge
+              </span>
+              <span className={`text-xs font-medium tracking-wide transition-colors ${
+                isScrolled ? 'text-accent' : 'text-accent'
+              }`}>
+                Global School
+              </span>
             </div>
-            <span className={`font-serif text-xl md:text-2xl font-medium tracking-tight transition-colors ${
-              isScrolled ? 'text-foreground' : 'text-foreground'
-            }`}>
-              Cambridge
-            </span>
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
-            <ul className="flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-6">
+            <ul className="flex items-center gap-5">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a 
+                  <a
                     href={link.href}
                     onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
-                    className={`text-sm font-medium hover:text-primary transition-colors ${
-                      isScrolled ? 'text-foreground/80' : 'text-foreground/90'
+                    className={`text-sm font-medium hover:text-accent transition-colors ${
+                      isScrolled ? 'text-foreground/80' : 'text-white/90 drop-shadow-sm'
                     }`}
                   >
                     {link.name}
@@ -82,18 +89,19 @@ export function Navbar() {
                 </li>
               ))}
             </ul>
-            <a 
-              href="#admissions"
-              onClick={(e) => { e.preventDefault(); scrollToSection('#admissions'); }}
-              className="px-5 py-2.5 bg-accent text-accent-foreground text-sm font-medium rounded-full shadow-sm hover:bg-accent/90 hover:-translate-y-0.5 transition-all"
+            <a
+              href="#video"
+              onClick={(e) => { e.preventDefault(); scrollToSection('#video'); }}
+              className="flex items-center gap-2 px-5 py-2.5 bg-accent text-foreground text-sm font-semibold rounded-full shadow-sm hover:bg-accent/90 hover:-translate-y-0.5 transition-all"
             >
-              Book a Tour
+              <Play className="w-3.5 h-3.5 fill-current" />
+              Watch Video
             </a>
           </nav>
 
           {/* Mobile Toggle */}
-          <button 
-            className="md:hidden p-2 text-foreground z-50 relative"
+          <button
+            className={`md:hidden p-2 z-50 relative transition-colors ${isScrolled ? 'text-foreground' : 'text-white'}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -105,32 +113,33 @@ export function Navbar() {
       {/* Mobile Nav Drawer */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 bg-background border-b border-border shadow-lg py-4 px-4 flex flex-col gap-4 md:hidden"
+            className="absolute top-full left-0 right-0 bg-white border-b border-border shadow-lg py-4 px-4 flex flex-col gap-4 md:hidden"
           >
-            <ul className="flex flex-col gap-2">
+            <ul className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a 
+                  <a
                     href={link.href}
                     onClick={(e) => { e.preventDefault(); scrollToSection(link.href); }}
-                    className="block px-4 py-3 text-lg font-medium text-foreground rounded-lg hover:bg-muted/50 transition-colors"
+                    className="block px-4 py-3 text-base font-medium text-foreground rounded-lg hover:bg-muted/60 transition-colors"
                   >
                     {link.name}
                   </a>
                 </li>
               ))}
             </ul>
-            <a 
-              href="#admissions"
-              onClick={(e) => { e.preventDefault(); scrollToSection('#admissions'); }}
-              className="w-full text-center py-3 bg-accent text-accent-foreground text-lg font-medium rounded-xl shadow-sm mt-2"
+            <a
+              href="#video"
+              onClick={(e) => { e.preventDefault(); scrollToSection('#video'); }}
+              className="flex items-center justify-center gap-2 w-full text-center py-3 bg-accent text-foreground text-base font-semibold rounded-xl shadow-sm mt-1"
             >
-              Book a Tour
+              <Play className="w-4 h-4 fill-current" />
+              Watch Video
             </a>
           </motion.div>
         )}

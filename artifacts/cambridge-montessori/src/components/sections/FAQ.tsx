@@ -4,28 +4,28 @@ import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
-    question: "What is Montessori education?",
-    answer: "Montessori is an educational method developed by Dr. Maria Montessori. It is a child-centered approach based on scientific observations of children. It values the human spirit and the development of the whole child—physical, social, emotional, and cognitive—in a prepared environment with hands-on learning materials."
+    question: "What is the Cambridge curriculum?",
+    answer: "The Cambridge curriculum at Novelle Cambridge Global School is based on 'My First Steps With Cambridge' — a comprehensive, holistic programme aligned with NEP 2020 and NCF 2025. It nurtures literacy, numeracy, general awareness and creative expression through the Panchaksha Vikas (Five-Fold Development) approach."
   },
   {
     question: "What age groups do you accept?",
-    answer: "We accept children from 2 years up to 6 years of age. Our programs are divided into Nursery (2-3 years), LKG (3-4 years), UKG (4-5 years), and Grade I (5-6 years)."
+    answer: "We welcome children from 1.5 years onwards. Our programmes include Day Care (1.5–2 years), Nursery (2–3 years), LKG (3–4 years), and UKG (4–5 years)."
   },
   {
-    question: "What curriculum do you follow?",
-    answer: "We follow the authentic Montessori curriculum integrated with modern early childhood education best practices. For our older age groups, we gently bridge Montessori concepts with foundational academic requirements to ensure smooth transitions to primary school."
+    question: "What teaching methodology do you follow?",
+    answer: "We combine the globally respected Cambridge curriculum with Montessori methodology — hands-on, child-centred learning that builds independence, critical thinking and a genuine love of discovery."
   },
   {
     question: "Is transportation available?",
-    answer: "Yes, we provide safe, air-conditioned transportation facilities with female attendants within a 10km radius of the school. All our vehicles are GPS tracked and parents receive live updates."
+    answer: "Yes, we provide safe transportation facilities with trained attendants. All vehicles are monitored and parents receive updates. Please contact us for route and availability details."
   },
   {
     question: "How do you communicate with parents?",
-    answer: "We believe in strong parent partnerships. We provide weekly digital updates, monthly newsletters, termly parent-teacher meetings, and daily notes for nursery children. We also host parent observation days twice a year."
+    answer: "We believe in strong parent partnerships through regular progress updates, parent-teacher interactions, workshops, celebration events and direct communication via phone and email."
   },
   {
-    question: "What are the school timings?",
-    answer: "Standard school hours are from 8:30 AM to 1:00 PM for younger children, and up to 3:00 PM for older groups. We also offer extended day care facilities until 5:30 PM for working parents."
+    question: "What makes Novelle Cambridge different?",
+    answer: "We offer a unique blend of Cambridge curriculum, Montessori methodology, global learning perspective, leadership development and a focus on social-emotional growth — all within a safe, nurturing campus in Visakhapatnam."
   }
 ];
 
@@ -39,17 +39,17 @@ export function FAQ() {
   return (
     <section className="py-24 bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        
+
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-secondary uppercase tracking-widest text-sm font-semibold mb-4 block">Clear Your Doubts</span>
+          <span className="text-accent uppercase tracking-widest text-sm font-semibold mb-4 block">Clear Your Doubts</span>
           <h2 className="text-4xl font-serif text-foreground mb-6">Frequently Asked Questions</h2>
         </div>
 
         <div className="max-w-3xl mx-auto bg-white p-6 md:p-10 rounded-3xl shadow-sm border border-border/40">
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="border border-border/50 rounded-2xl overflow-hidden transition-colors hover:border-primary/30"
               >
                 <button
@@ -57,13 +57,13 @@ export function FAQ() {
                   className="w-full text-left px-6 py-5 flex items-center justify-between bg-card hover:bg-card/80 transition-colors focus:outline-none"
                 >
                   <span className="font-medium text-foreground pr-8">{faq.question}</span>
-                  <ChevronDown 
+                  <ChevronDown
                     className={`w-5 h-5 text-primary shrink-0 transition-transform duration-300 ${
                       openIndex === index ? 'rotate-180' : ''
-                    }`} 
+                    }`}
                   />
                 </button>
-                
+
                 <AnimatePresence>
                   {openIndex === index && (
                     <motion.div

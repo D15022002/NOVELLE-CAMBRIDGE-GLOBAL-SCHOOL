@@ -3,10 +3,11 @@ import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { Hero } from '@/components/sections/Hero';
 import { Welcome } from '@/components/sections/Welcome';
+import { CambridgeCurriculum } from '@/components/sections/CambridgeCurriculum';
 import { Philosophy } from '@/components/sections/Philosophy';
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs';
-import { MontessoriMethod } from '@/components/sections/MontessoriMethod';
 import { Programs } from '@/components/sections/Programs';
+import { SchoolVideo } from '@/components/sections/SchoolVideo';
 import { DayAtSchool } from '@/components/sections/DayAtSchool';
 import { CoreValues } from '@/components/sections/CoreValues';
 import { BeyondClassroom } from '@/components/sections/BeyondClassroom';
@@ -25,10 +26,11 @@ function Home() {
       <main className="flex-1">
         <Hero />
         <Welcome />
+        <CambridgeCurriculum />
         <Philosophy />
         <WhyChooseUs />
-        <MontessoriMethod />
         <Programs />
+        <SchoolVideo />
         <DayAtSchool />
         <CoreValues />
         <BeyondClassroom />
@@ -54,7 +56,7 @@ function App() {
           <div className="min-h-screen flex items-center justify-center bg-background flex-col gap-4 text-center p-4">
             <h1 className="text-4xl font-serif text-primary">Page Not Found</h1>
             <p className="text-muted-foreground max-w-md">The page you are looking for doesn't exist or has been moved.</p>
-            <a href="/" className="inline-flex h-10 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90">
+            <a href="/" className="inline-flex h-10 items-center justify-center rounded-full bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90">
               Return Home
             </a>
           </div>
