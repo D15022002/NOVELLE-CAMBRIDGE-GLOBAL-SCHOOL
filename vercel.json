@@ -4,10 +4,7 @@
   "buildCommand": "corepack pnpm --filter @workspace/api-server run build && corepack pnpm --filter @workspace/cambridge-montessori run build",
   "functions": {
     "api/server.js": {
-      "includeFiles": [
-        "artifacts/api-server/dist/**",
-        "artifacts/cambridge-montessori/dist/public/**"
-      ]
+      "includeFiles": "artifacts/**"
     }
   },
   "rewrites": [
