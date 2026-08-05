@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: './',
+  base: '/NOVELLE-CAMBRIDGE-GLOBAL-SCHOOL/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

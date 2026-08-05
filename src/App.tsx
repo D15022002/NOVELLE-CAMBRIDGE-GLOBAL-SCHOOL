@@ -45,14 +45,14 @@ function Home() {
 
 function App() {
   return (
-    <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+    <WouterRouter base="/NOVELLE-CAMBRIDGE-GLOBAL-SCHOOL">
       <Switch>
         <Route path="/" component={Home} />
         <Route>
           <div className="min-h-screen flex items-center justify-center bg-background flex-col gap-4 text-center p-4">
             <h1 className="text-4xl font-serif text-primary">Page Not Found</h1>
             <p className="text-muted-foreground max-w-md">The page you are looking for doesn't exist or has been moved.</p>
-            <a href="/" className="inline-flex h-10 items-center justify-center rounded-full bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90">
+            <a href="/NOVELLE-CAMBRIDGE-GLOBAL-SCHOOL/" className="inline-flex h-10 items-center justify-center rounded-full bg-primary px-8 text-sm font-medium text-primary-foreground shadow transition-colors hover:bg-primary/90">
               Return Home
             </a>
           </div>
