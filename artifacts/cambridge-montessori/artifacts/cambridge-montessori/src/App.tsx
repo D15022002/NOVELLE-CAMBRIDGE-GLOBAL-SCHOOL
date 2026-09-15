@@ -45,7 +45,7 @@ function Home() {
 
 function App() {
   return (
-    <WouterRouter>
+    <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <Switch>
         <Route path="/" component={Home} />
         <Route>

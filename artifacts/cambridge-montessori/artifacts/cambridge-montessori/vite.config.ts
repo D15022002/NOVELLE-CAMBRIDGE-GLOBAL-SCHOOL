@@ -3,8 +3,30 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
 
+const isProduction = process.env.NODE_ENV === 'production';
+const rawPort = process.env.PORT ?? '5173';
+const basePath = process.env.BASE_PATH ?? '/';
+
+if (!isProduction && !process.env.PORT) {
+  throw new Error(
+    'PORT environment variable is required but was not provided.',
+  );
+}
+
+const port = Number(rawPort);
+
+if (Number.isNaN(port) || port <= 0) {
+  throw new Error(`Invalid PORT value: "${rawPort}"`);
+}
+
+if (!isProduction && !process.env.BASE_PATH) {
+  throw new Error(
+    'BASE_PATH environment variable is required but was not provided.',
+  );
+}
+
 export default defineConfig({
-  base: './',
+  base: basePath,
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
@@ -24,7 +46,7 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
-    port: 5173,
+    port,
     strictPort: true,
     host: '0.0.0.0',
     allowedHosts: true,
@@ -33,11 +55,8 @@ export default defineConfig({
     },
   },
   preview: {
-    port: 5173,
+    port,
     host: '0.0.0.0',
     allowedHosts: true,
   },
 });
-
-
-
